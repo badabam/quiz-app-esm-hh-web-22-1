@@ -1,9 +1,12 @@
-console.clear();
+import Card from './js/Card.js';
 
-import { answers } from './js/answers.js';
-import { bookmarks } from './js/bookmarks.js';
 import { create } from './js/create.js';
 
-bookmarks();
-answers();
+// NodeList [HTMLElement, HTMLElement]
+const allCardElements = document.querySelectorAll('[data-js="card"]');
+
+allCardElements.forEach((cardElement) => {
+  Card(cardElement);
+});
+
 create();
